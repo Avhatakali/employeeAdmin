@@ -1,0 +1,56 @@
+<!--
+  Generated template for the EmployeePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>employee</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-list *ngFor ="let v of arrEmo, let u = index ">
+
+<ion-item>
+    <ion-label color="primary" stacked>Name</ion-label>
+    <ion-input type="username" value="{{v.name}}" ></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label color="primary" stacked>Surname</ion-label>
+  <ion-input type="username" value ="{{v.surname}}"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label color="primary" stacked>username</ion-label>
+  <ion-input type="username" value ="{{v.username}}"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label color="primary" stacked>password</ion-label>
+  <ion-input type="username" value ="{{v.password}}"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label color="primary" stacked>ID No.</ion-label>
+    <ion-input type="username" value ="{{v.id}}"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label color="primary" stacked>Position</ion-label>
+    <ion-input type="username" value ="{{v.role}}"></ion-input>
+</ion-item>
+
+  <!-- <button ion-button type="submit" (click)="addEmployee(name.value, surname.value, role.value, id.value, username.value, password.value)">Add New</button> -->
+  <button ion-button (click)="update(u,name,surname,username,role,id,password)">Update</button>
+  <button ion-button color="danger" (click)="Delete(u)"><ion-icon name="trash"></ion-icon></button>
+
+  </ion-list> 
+
+</ion-content>
