@@ -15,52 +15,50 @@
 
 <ion-content padding>
 
-<ion-item>
-    <ion-label color="primary" stacked>Firstname</ion-label>
-    <ion-input type="text" #name></ion-input>
-</ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Firstname</ion-label>
+        <ion-input type="text" #name></ion-input>
+    </ion-item>
 
 
-<ion-item>
-    <ion-label color="primary" stacked>Surname</ion-label>
-    <ion-input type="text" #surname></ion-input>
-</ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Surname</ion-label>
+        <ion-input type="text" #surname></ion-input>
+    </ion-item>
 
-<ion-item>
-     <ion-label color="primary" stacked>Identity</ion-label>
-     <ion-input type="text" #id></ion-input>
- </ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Identity</ion-label>
+        <ion-input type="text" #id></ion-input>
+    </ion-item>
 
-<ion-item>
-    <ion-label color="primary" stacked>Role</ion-label>
-    <ion-input type="text" #role></ion-input>
-</ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Role</ion-label>
+        <ion-input type="text" #role></ion-input>
+    </ion-item>
 
-<ion-item>
-    <ion-label color="primary" stacked>Username</ion-label>
-    <ion-input type="text" #username></ion-input>
-</ion-item>
-
-
-<ion-item>
-    <ion-label color="primary" stacked>Password</ion-label>
-    <ion-input type="password" #password></ion-input>
-</ion-item>
+    <ion-item>
+        <ion-label color="primary" stacked>Username</ion-label>
+        <ion-input type="text" #username></ion-input>
+    </ion-item>
 
 
-    
-    <!-- <ion-label color="primary" stacked>File upload</ion-label> -->
-    <ion-input type="file" accept="image/png, image/jpeg" (change) ="onFileSelected($event)"></ion-input><br>
-    <img [src]="url" width="300" height="300"><br>
-    <button type="button" (click)="onUpload()"></button>
+    <ion-item>
+        <ion-label color="primary" stacked>Password</ion-label>
+        <ion-input type="password" #password></ion-input>
+    </ion-item>
+        
+        <!-- <ion-label color="primary" stacked>File upload</ion-label> -->
+        <ion-input type="file" accept="image/png, image/jpeg" (change) ="onFileSelected($event)"></ion-input><br>
+        <img [src]="url" width="300" height="300"><br>
+        <button type="button" (click)="onUpload()"></button>
 
 
-<button ion-button type="submit" value="submit" (click)="signup(name.value, surname.value, id.value, role.value, username.value, password.value)">Sign up</button>
-<button ion-button (click) = "login()">Log in</button>
+    <button ion-button type="submit" value="submit" (click)="signup(name.value, surname.value, id.value, role.value, username.value, password.value)">Sign up</button>
+    <button ion-button (click) = "login()">Log in</button>
 
-<ion-list *ngFor ="let x of arr, let a = index ">
-    {{ x }}
-</ion-list>
+    <ion-list *ngFor ="let x of arr, let a = index ">
+        {{ x }}
+    </ion-list>
 
 </ion-content>
 

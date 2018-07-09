@@ -5,6 +5,7 @@ import { SignupPage } from '../signup/signup';
 import { HomePage } from '../home/home';
 import arr from '../../app/arrayT';
 import { Task } from '../../app/Task';
+import { AlertController } from 'ionic-angular';
 
 
 /**
@@ -22,7 +23,7 @@ import { Task } from '../../app/Task';
 
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
 //condition to access employeePage
@@ -39,17 +40,34 @@ for(let index = 0; index < arr.length; index++){
       }
 
       else if(name == '' && password == this.Password){
-        alert('username is Empty');
+        const alert = this.alertCtrl.create({
+          title: 'ERROR MESSAGE!',
+          subTitle: 'insert correct username!',
+          buttons: ['OK']
+        });
+        alert.present();
         this.navCtrl.push(LoginPage);
       }
 
       else if(name == this.Name && password == ''){
-        alert('password is Empty');
+      
+          const alert = this.alertCtrl.create({
+            title: 'ERROR MESSAGE!',
+            subTitle: 'insert username and password!',
+            buttons: ['OK']
+          });
+          alert.present();
         this.navCtrl.push(LoginPage);
       }
 
       else{
-      alert('username / password incorrect');
+    
+            const alert = this.alertCtrl.create({
+              title: ' ERROR MESSAGE!',
+              subTitle: ' !',
+              buttons: ['OK']
+            });
+            alert.present();
       this.navCtrl.push(LoginPage);
       }
 }
@@ -57,9 +75,8 @@ for(let index = 0; index < arr.length; index++){
     console.log('ionViewDidLoad LoginPage');
   }
 
-  cancel(){
-    this.navCtrl.push(SignupPage);
-}
-
-  
+      cancel(){
+        this.navCtrl.push(SignupPage);
+   }
+ 
 }
