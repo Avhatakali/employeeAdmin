@@ -1,17 +1,23 @@
 page-signup {
-border: 4px solid aliceblue;
-background-image: url();
-width: 50%;
-background-color: azure;
-color: white;
-}
-
-ion-footer{
-    margin-left: 2%;
-    margin-right: 2%;
-}
-
-.toolbar-background {
-    background-color: rgb(0, 119, 255);
+    border: 4px solid aliceblue;
+    background-image: url();
+    width: 50%;
+    background-color: azure;
     color: white;
+
+
+    ion-footer{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .toolbar-background {
+        background-color: rgb(0, 119, 255);
+        color: white;
   }
+
+  ion-input{
+      
+  }
+
+}
